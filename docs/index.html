@@ -43,6 +43,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap">
     <link rel="stylesheet" href="eclipse.css"></link>
 
     <!-- js -->
@@ -52,38 +54,10 @@
 </head>
 <body>
 <style>
-@font-face {
-    font-family: NanumGothic;
-    font-style: normal;
-    font-weight: 400;
-    src: url("./fonts/NanumGothic-400.woff") format("woff");
-}
-
-@font-face {
-    font-family: NanumGothic;
-    font-style: normal;
-    font-weight: 700;
-    src: url("./fonts/NanumGothic-700.woff") format("woff");
-}
-
-@font-face {
-    font-family: NanumSquare;
-    font-style: normal;
-    font-weight: 400;
-    src: url("./fonts/NanumSquare-400.woff") format("woff");
-}
-
-@font-face {
-    font-family: NanumSquare;
-    font-style: normal;
-    font-weight: 700;
-    src: url("./fonts/NanumSquare-700.woff") format("woff");
-}
-
 * {box-sizing: border-box; margin: 0; padding: 0; font-family: inherit; font-style: normal; font-weight: inherit; font-size: inherit; line-height: inherit; text-decoration: inherit; color: inherit; vertical-align: top; outline: none;}
 
 html {width: 100%; height: 100%; -ms-touch-action: manipulation; touch-action: manipulation;}
-body {width: 100%; height: 100%; font-family: NanumSquare; font-weight: 400; font-size: 17px; line-height: 1.5; color: #666666; -webkit-font-smoothing: antialiased; /*font-smoothing: antialiased;*/ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-size-adjust: 100%; -webkit-print-color-adjust: exact;}
+body {width: 100%; height: 100%; font-family: 'NanumSquare'; font-weight: 400; font-size: 17px; line-height: 1.5; color: #666666; -webkit-font-smoothing: antialiased; /*font-smoothing: antialiased;*/ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-size-adjust: 100%; -webkit-print-color-adjust: exact;}
 
 table {width: 100%; border-spacing: 0; table-layout: fixed;}
 
@@ -119,7 +93,7 @@ td, th {vertical-align: middle;}
 #inner .demowrap .demo .desc {margin: 0 0 20px;}
 #inner .demowrap .demo .desc .tit {color: #000000;}
 #inner .demowrap .demo .desc .txt {margin: 10px 0 0;}
-#inner .demowrap .demo .source {margin: 30px 0 0; padding: 25px; border-radius: 15px; background: #1e1e1e; font-family: NanumGothic; font-size: 14px; line-height: 1.5; color: #ffffff; letter-spacing: 0.1em; word-break:break-all; white-space: pre-wrap;}
+#inner .demowrap .demo .source {margin: 30px 0 0; padding: 25px; border-radius: 15px; background: #1e1e1e; font-family: 'NanumGothic'; font-size: 14px; line-height: 1.5; color: #ffffff; letter-spacing: 0.1em; word-break:break-all; white-space: pre-wrap;}
 #inner .demowrap .demo .source .hljs-tag {color: #569cd6;}
 #inner .demowrap .demo .source .hljs-attr {color: #9cdcfe;}
 #inner .demowrap .demo .source .hljs-string {color: #ce723b;}
@@ -139,8 +113,7 @@ td, th {vertical-align: middle;}
             <section class="greeting">
                 <h2>1. 개요</h2>
                 <p class="txt">이미지 및 컨텐츠 롤링 기능이 있는 <strong>jquery 슬라이더 플러그인</strong> 입니다.<br>
-                오늘도 영문사이트 보시느라 눈이 아플 한국의 웹퍼블리셔 및 웹개발자들을 위해 만들어 봤습니다.<br>
-                사용자피드백을 통해 지속적으로 업데이트 할 예정입니다.</p>
+                사용자피드백을 통해 지속적으로 업데이트 하겠습니다.</p>
                 <a href="https://github.com/simplizm-company/eclipse" class="link">소스 다운로드 (github)</a>
             </section>
             <section class="options">
@@ -433,10 +406,18 @@ td, th {vertical-align: middle;}
                             #eclipse8 .eclipse-slides img {width: 100%;}
                         </style>
                         <div class="eclipse-slider">
-                            <div><img src="https://dummyimage.com/600x200/d3d6f5/000000" alt=""></div>
-                            <div><img src="https://dummyimage.com/600x400/d3d5f5/000000" alt=""></div>
-                            <div><img src="https://dummyimage.com/600x600/d3d5f5/000000" alt=""></div>
-                            <div><img src="https://dummyimage.com/600x400/d3d5f5/000000" alt=""></div>
+                            <div>
+                                <div style="height: 200px; line-height: 200px;">200px</div>
+                            </div>
+                            <div>
+                                <div style="height: 300px; line-height: 300px;">300px</div>
+                            </div>
+                            <div>
+                                <div style="height: 400px; line-height: 400px;">400px</div>
+                            </div>
+                            <div>
+                                <div style="height: 500px; line-height: 500px;">500px</div>
+                            </div>
                         </div>
                         <script>
                             $('#eclipse8').eclipse({
@@ -476,9 +457,9 @@ td, th {vertical-align: middle;}
                     </div>
                     <div id="eclipse10">
                         <style>
-                            #eclipse10 .eclipse-slides {padding: 50px 0; opacity: 0.3; height: auto; line-height: 164px; background: none;}
-                            #eclipse10 .eclipse-slides div {width: 100%; height: 164px; background: #000000; color: #ffffff;}
-                            #eclipse10 .eclipse-active-3 div {transform: translateY(50px);}
+                            #eclipse10 .eclipse-slides {height: auto; background: none;}
+                            #eclipse10 .eclipse-slides div {width: 100%; height: 164px; line-height: 164px; background: #000000; color: #ffffff; opacity: 0.3;}
+                            #eclipse10 .eclipse-active-3 div {opacity: 1;}
                         </style>
                         <div class="eclipse-slider">
                             <div><div>1</div></div>
