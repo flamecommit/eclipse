@@ -288,6 +288,7 @@ td, th {vertical-align: middle;}
                         </div>
                         <script>
                             $('#eclipse4').eclipse({
+                                infinite: false,
                                 margin: 20,
                                 slidesToShow: 2,
                                 slidesToMove: 2
@@ -340,7 +341,7 @@ td, th {vertical-align: middle;}
                         <script>
                             $('#eclipse6').eclipse({
                                 margin: 20,
-                                autoplay: true,
+                                autoplay: false,
                                 interval: 2000,
                                 autoControl: true
                             });
@@ -459,6 +460,24 @@ td, th {vertical-align: middle;}
                                 margin: 20,
                                 slidesToShow: 5,
                                 countIndex: 2
+                            });
+                        </script>
+                    </div>
+                </section>
+                <section class="demo">
+                    <div class="desc">
+                        <h3 class="tit">11. infinite</h3>
+                    </div>
+                    <div id="eclipse11">
+                        <div class="eclipse-slider">
+                            <div><div>1</div></div>
+                            <div><div>2</div></div>
+                            <div><div>3</div></div>
+                            <div><div>4</div></div>
+                        </div>
+                        <script>
+                            $('#eclipse11').eclipse({
+                                infinite: false
                             });
                         </script>
                     </div>
