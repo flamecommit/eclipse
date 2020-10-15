@@ -35,7 +35,8 @@
                 adaptiveHeight: false,
                 connected: null,
                 connectedPager: false,
-				infinite: true
+                infinite: true, // 무한 롤링 여부
+                draggable: true
             }
 
             _.options = $.extend(true, _.defaults, settings);
@@ -651,9 +652,11 @@
     Eclipse.prototype.setEvents = function() {
         var _ = this;
 
-        _.$slider.off(_.events.clickstart).on(_.events.clickstart, function(e) {
-            _.clickStart(e);
-        });
+        if (_.options.draggable) {
+            _.$slider.off(_.events.clickstart).on(_.events.clickstart, function(e) {
+                _.clickStart(e);
+            });
+        }
 
         if (_.$arrowPrev) {
             _.$arrowPrev.on(_.events.click, function() {
